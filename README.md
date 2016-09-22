@@ -1,2 +1,0 @@
-# MvcMovie
-MvcMovie repository 
