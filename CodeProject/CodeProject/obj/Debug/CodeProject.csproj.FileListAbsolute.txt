@@ -48,7 +48,6 @@ C:\Users\dannym\Documents\GitHub\MvcMovie\CodeProject\CodeProject\bin\System.Web
 C:\Users\dannym\Documents\GitHub\MvcMovie\CodeProject\CodeProject\bin\System.Web.WebPages.Razor.xml
 C:\Users\dannym\Documents\GitHub\MvcMovie\CodeProject\CodeProject\bin\Antlr3.Runtime.pdb
 C:\Users\dannym\Documents\GitHub\MvcMovie\CodeProject\CodeProject\bin\Newtonsoft.Json.xml
-C:\Users\dannym\Documents\GitHub\MvcMovie\CodeProject\CodeProject\obj\Debug\CodeProject.csprojResolveAssemblyReference.cache
 C:\Users\dannym\Documents\GitHub\MvcMovie\CodeProject\CodeProject\obj\Debug\CodeProject.dll
 C:\Users\dannym\Documents\GitHub\MvcMovie\CodeProject\CodeProject\obj\Debug\CodeProject.pdb
 C:\Users\dannym\Documents\GitHub\MvcMovie\CodeProject\CodeProject\bin\roslyn\csc.exe.config

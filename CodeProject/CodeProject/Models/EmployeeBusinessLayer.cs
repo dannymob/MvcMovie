@@ -12,5 +12,12 @@ namespace CodeProject.Models
             return salesDal.Employees.ToList();
         } 
 
+        public employee SaveEmployee(employee e)
+        {
+            SalesERPDAL salesDal = new SalesERPDAL();
+            salesDal.Employees.Add(e);
+            salesDal.SaveChanges();
+            return e;
+        }
     }
 }

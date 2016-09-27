@@ -22,15 +22,6 @@ namespace CodeProject.Controllers
     public class EmployeeController : Controller
     {
 
-        public Customer GetCustomer()
-        {
-            Customer c = new Customer();
-            c.CustomerName = "John Doh";
-            c.Address = "Area 51";
-            return c;
-            
-        }
-
         public ActionResult index()
         {
 
@@ -63,6 +54,28 @@ namespace CodeProject.Controllers
         public ActionResult AddNew()
         {
             return View("CreateEmployee");
+        }
+
+        public ActionResult SaveEmployee(employee e, string BtnSubmit)
+        {
+            switch (BtnSubmit)
+            {
+                case "Save Employee":
+                    if (ModelState.IsValid)
+                    {
+                        EmployeeBusinessLayer empBal = new EmployeeBusinessLayer();
+                        empBal.SaveEmployee(e);
+                        return RedirectToAction("Index");
+                    }
+                    else
+                    {
+                        return View("CreateEmployee");
+                    }
+                    
+                case "Cancel":
+                    return RedirectToAction("Index");
+            }
+            return new EmptyResult();
         }
     }
 }
