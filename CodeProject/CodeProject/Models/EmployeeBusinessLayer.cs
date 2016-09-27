@@ -1,18 +1,15 @@
 ﻿using System.Collections.Generic;
+using CodeProject.DataAccessLayer;
+using System.Linq;
 
 namespace CodeProject.Models
 {
     public class EmployeeBusinessLayer
     {
-        public List<Employee> GetEmployees()
+        public List<employee> GetEmployees()
         {
-            List<Employee> employees = new List<Employee>();
-            Employee emp = new Employee();
-            emp.FirstName = "Mr.";
-            emp.LastName = "Smith";
-            emp.Salary = 14000;
-            employees.Add(emp);
-            return  employees ;
+            SalesERPDAL salesDal = new SalesERPDAL();
+            return salesDal.Employees.ToList();
         } 
 
     }

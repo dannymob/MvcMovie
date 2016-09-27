@@ -1,0 +1,35 @@
+﻿@using CodeProject.ViewModel   
+@model EmployeeListViewModel
+
+@{
+    Layout = Layout;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MyView</title>
+</head>
+<body>
+    <div> 
+        <div>
+            <a href="/Employee/AddNew">Add New</a>
+            <table class="table table-hover">
+                <tr>
+                    <th>Employee Name</th>
+                    <th>Salary</th>
+                </tr>
+                @foreach (EmployeeViewModel item in Model.Employees)
+                {
+                    <tr>
+                        <td>@item.EmployeeName</td>
+                        <td style="color:@item.SalaryColor">@item.Salary</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</body>
+</html>
