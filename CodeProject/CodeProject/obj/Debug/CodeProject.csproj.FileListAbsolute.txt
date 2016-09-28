@@ -68,3 +68,4 @@ C:\Users\dannym\Documents\GitHub\MvcMovie\CodeProject\CodeProject\bin\EntityFram
 C:\Users\dannym\Documents\GitHub\MvcMovie\CodeProject\CodeProject\bin\EntityFramework.SqlServer.dll
 C:\Users\dannym\Documents\GitHub\MvcMovie\CodeProject\CodeProject\bin\EntityFramework.xml
 C:\Users\dannym\Documents\GitHub\MvcMovie\CodeProject\CodeProject\bin\EntityFramework.SqlServer.xml
+C:\Users\dannym\Documents\GitHub\MvcMovie\CodeProject\CodeProject\obj\Debug\CodeProject.csprojResolveAssemblyReference.cache

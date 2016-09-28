@@ -37,12 +37,17 @@ namespace CodeProject.Controllers
                 EmployeeViewModel empViewModel = new EmployeeViewModel();
                 empViewModel.EmployeeName = emp.FirstName + " " + emp.LastName;
                 empViewModel.Salary = emp.Salary.ToString("C");
-                if (emp.Salary>15000)
+                if (emp.Salary<10000)
                 {
-                    empViewModel.SalaryColor = "orange";
-                } else
+                    empViewModel.SalaryColor = "danger";
+                }
+                else if (emp.Salary>20000)
                 {
-                    empViewModel.SalaryColor = "green";
+                    empViewModel.SalaryColor = "success";
+                }
+                else
+                {
+                    empViewModel.SalaryColor = "warning";
                 }
                 empViewModels.Add(empViewModel);
             }

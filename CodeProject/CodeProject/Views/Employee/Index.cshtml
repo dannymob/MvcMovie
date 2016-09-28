@@ -15,7 +15,7 @@
 <body>
     <div> 
         <div>
-            <a href="/Employee/AddNew">Add New</a>
+            <a id="addNew" class="btn btn-primary" href="/Employee/AddNew" role="button">Add New</a>
             <table class="table table-hover">
                 <tr>
                     <th>Employee Name</th>
@@ -23,9 +23,9 @@
                 </tr>
                 @foreach (EmployeeViewModel item in Model.Employees)
                 {
-                    <tr>
+                    <tr class="@item.SalaryColor">
                         <td>@item.EmployeeName</td>
-                        <td style="color:@item.SalaryColor">@item.Salary</td>
+                        <td>@item.Salary</td>
                     </tr>
                 }
             </table>

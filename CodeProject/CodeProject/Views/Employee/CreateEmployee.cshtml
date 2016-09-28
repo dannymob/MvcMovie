@@ -19,13 +19,13 @@
 </head>
 <body>
     <div>
-        <form action="/Employee/SaveEmployee" method="post">
-            First Name: <input type="text" id="TxtFName" name="FirstName" value="" />@Html.ValidationMessage("FirstName")<br />
-            Last Name: <input type="text" id="TxtLName" name="LastName" value="" />@Html.ValidationMessage("LastName")<br />
-            Salary: <input type="text" id="TxtSalary" name="Salary" value="" />@Html.ValidationMessage("Salary")<br />
-            <input type="submit" name="BtnSubmit" value="Save Employee" />
-            <input type="reset" name="BtnReset" value="Reset" />
-            <input type="submit" name="BtnSubmit" value="Cancel" />
+        <form class="form-horizontal" action="/Employee/SaveEmployee" method="post">
+            First Name: <input class="form-control" type="text" id="TxtFName" name="FirstName" value="" />@Html.ValidationMessage("FirstName", new { @class = "text-danger", @style = "margin-left:5px" })<br />
+            Last Name: <input class="form-control" type="text" id="TxtLName" name="LastName" value="" />@Html.ValidationMessage("LastName", new { @class = "text-danger", @style = "margin-left:5px" })<br />
+            Salary: <input class="form-control" type="text" id="TxtSalary" name="Salary" value="" />@Html.ValidationMessage("Salary", new { @class = "text-danger", @style = "margin-left:5px" })<br />
+            <input class="btn btn-success" type="submit" name="BtnSubmit" value="Save Employee" />
+            <input class="btn btn-warning" type="reset" name="BtnReset" value="Reset" />
+            <input class="btn btn-default" type="submit" name="BtnSubmit" value="Cancel" />
         </form> 
     </div>
 </body>
