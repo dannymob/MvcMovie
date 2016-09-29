@@ -19,5 +19,17 @@ namespace CodeProject.Models
             salesDal.SaveChanges();
             return e;
         }
+
+        public bool IsValidUser(UserDetails u)
+        {
+            if (u.UserName == "admin" && u.Password == "admin")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

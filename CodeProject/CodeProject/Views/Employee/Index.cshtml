@@ -13,23 +13,27 @@
     <title>MyView</title>
 </head>
 <body>
-    <div> 
-        <div>
-            <a id="addNew" class="btn btn-primary" href="/Employee/AddNew" role="button">Add New</a>
-            <table class="table table-hover">
-                <tr>
-                    <th>Employee Name</th>
-                    <th>Salary</th>
+    <div style="text-align:right">
+        Hello, @Model.UserName
+        <a class="btn btn-default" href="/Authentication/Logout">Logout</a>
+    </div> 
+    
+    <a id="addNew" class="btn btn-primary" href="/Employee/AddNew" role="button">Add New</a>
+    
+    <div>
+        <table class="table table-hover">
+            <tr>
+                <th>Employee Name</th>
+                <th>Salary</th>
+            </tr>
+            @foreach (EmployeeViewModel item in Model.Employees)
+            {
+                <tr class="@item.SalaryColor">
+                    <td>@item.EmployeeName</td>
+                    <td>@item.Salary</td>
                 </tr>
-                @foreach (EmployeeViewModel item in Model.Employees)
-                {
-                    <tr class="@item.SalaryColor">
-                        <td>@item.EmployeeName</td>
-                        <td>@item.Salary</td>
-                    </tr>
-                }
-            </table>
-        </div>
+            }
+        </table>
     </div>
 </body>
 </html>

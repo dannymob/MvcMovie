@@ -1,5 +1,6 @@
 ﻿using CodeProject.Models;
 using CodeProject.ViewModel;
+using CodeProject.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,13 +20,15 @@ namespace CodeProject.Controllers
         }
     }
 
+    [Authorize]
     public class EmployeeController : Controller
     {
-
+        [Authorize]
         public ActionResult index()
         {
 
             EmployeeListViewModel employeeListViewModel = new EmployeeListViewModel();
+            employeeListViewModel.UserName = User.Identity.Name;
 
             EmployeeBusinessLayer empBal = new EmployeeBusinessLayer();
             List<employee> employees = empBal.GetEmployees();
@@ -58,7 +61,7 @@ namespace CodeProject.Controllers
 
         public ActionResult AddNew()
         {
-            return View("CreateEmployee");
+            return View("CreateEmployee", new CreateEmployeeViewModel());
         }
 
         public ActionResult SaveEmployee(employee e, string BtnSubmit)
@@ -74,7 +77,18 @@ namespace CodeProject.Controllers
                     }
                     else
                     {
-                        return View("CreateEmployee");
+                        CreateEmployeeViewModel vm = new CreateEmployeeViewModel();
+                        vm.FirstName = e.FirstName;
+                        vm.LastName = e.LastName;
+                        if (e.Salary>0)
+                        {
+                            vm.Salary = e.Salary.ToString();
+                        }
+                        else
+                        {
+                            vm.Salary = ModelState["Salary"].Value.AttemptedValue;
+                        }
+                        return View("CreateEmployee", vm);
                     }
                     
                 case "Cancel":
