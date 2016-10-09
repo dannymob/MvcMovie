@@ -17,6 +17,10 @@ form {
     margin: 15px;
 }
 
+hr {
+    margin-bottom: auto;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;

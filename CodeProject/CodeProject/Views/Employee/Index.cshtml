@@ -13,13 +13,15 @@
     <title>MyView</title>
 </head>
 <body>
-    <div style="text-align:right">
+    <div style="text-align:right; margin:15px;">
         Hello, @Model.UserName
         <a class="btn btn-default" href="/Authentication/Logout">Logout</a>
-    </div> 
-    
-    <a id="addNew" class="btn btn-primary" href="/Employee/AddNew" role="button">Add New</a>
-    
+    </div>
+     
+    <hr />
+    @{ 
+        Html.RenderAction("GetAddNewLink");
+    }
     <div>
         <table class="table table-hover">
             <tr>
@@ -34,6 +36,12 @@
                 </tr>
             }
         </table>
+        @{ 
+            MvcHtmlString result = Html.Partial("Footer", Model.FooterData);
+            string finalResult = result.ToHtmlString().Replace("2016", "20000");
+            //Html.RenderPartial("Footer", Model.FooterData);
+        }
+        @MvcHtmlString.Create(finalResult)
     </div>
 </body>
 </html>
