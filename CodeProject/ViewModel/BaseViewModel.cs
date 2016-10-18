@@ -8,6 +8,8 @@ namespace CodeProject.ViewModel
     public class BaseViewModel
     {
         public string UserName { get; set; }
-        public FooterViewModel FooterData { get; set; }
+
+        public int Year = DateTime.Now.Year;
+        public string CompanyName = "The Twins";
     }
 }

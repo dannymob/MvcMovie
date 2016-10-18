@@ -3,22 +3,33 @@
     padding-bottom: 20px;
 }
 
-table {
-    margin-top: 20px;
-}
-
 form {
     margin: 15px auto;
     width: 50%;
 }
 
-#addNew {
-    float: right;
-    margin: 15px;
+.control-panel {
+    text-align: center;
+}
+
+.control-panel .btn {
+    margin: 10px 5px;
 }
 
 hr {
     margin-bottom: auto;
+}
+
+#fileUp {
+    margin: 15px 0;
+}
+
+#fileUp form {
+    text-align: center;
+}
+
+#fileUp form input {
+    margin: 5px auto;
 }
 
 /* Set padding to keep content from hitting the edges */

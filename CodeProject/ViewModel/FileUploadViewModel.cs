@@ -5,9 +5,8 @@ using System.Web;
 
 namespace CodeProject.ViewModel
 {
-    public class FooterViewModel
+    public class FileUploadViewModel: BaseViewModel
     {
-        public string CompanyName { get; set; }
-        public string Year { get; set; }
+        public HttpPostedFileBase fileUpload { get; set; }
     }
 }

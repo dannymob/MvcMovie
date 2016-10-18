@@ -46,15 +46,13 @@ namespace CodeProject.Controllers
             }
 
             employeeListViewModel.Employees = empViewModels;
-            employeeListViewModel.FooterData = new FooterViewModel();
-            employeeListViewModel.FooterData.CompanyName = "StepByStepSchools";
-            employeeListViewModel.FooterData.Year = DateTime.Now.Year.ToString();
             return View("Index", employeeListViewModel);
         }
 
         [AdminFilter]
         public ActionResult AddNew()
         {
+            CreateEmployeeViewModel employeeListViewModel = new CreateEmployeeViewModel();
             return View("CreateEmployee", new CreateEmployeeViewModel());
         }
 

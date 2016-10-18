@@ -35,5 +35,12 @@ namespace CodeProject.Models
                 return UserStatus.NonAuthenticatedUser;
             }
         }
+
+        public void UploadEmployees(List<employee> employees)
+        {
+            SalesERPDAL salesDal = new SalesERPDAL();
+            salesDal.Employees.AddRange(employees);
+            salesDal.SaveChanges();
+        }
     }
 }
